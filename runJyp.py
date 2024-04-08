@@ -11,4 +11,4 @@ log_file_path = 'C:/Users/Richard/OneDrive - ViaUC/Arbejde/GitHub/FunStuff/log.t
 now = datetime.datetime.now()
 
 # Run the Jupyter Notebook
-os.system(f'jupyter nbconvert --execute {notebook_path} --output {now.strftime("%Y-%m-%d")}.ipynb >> {log_file_path} 2>&1')
+os.system(f'jupyter nbconvert --execute --inplace --to notebook "{notebook_path}" >> "{log_file_path}" 2>&1')
